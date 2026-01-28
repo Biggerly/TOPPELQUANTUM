@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toppel Quantum | About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #2A2750;
+            --gold: #E4B461;
+            --purple: #5A4B9C;
+            --beige: #F4E8DA;
+            --peach: #EED9C6;
+            --white: #FFFFFF;
+            --light-gray: #F8F8F8;
+            --gray: #777777;
+            --dark-gray: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--beige) 0%, var(--peach) 100%);
+            color: var(--navy);
+            line-height: 1.6;
+        }
+
+        
+
+        .container {
+            max-width: 1200px;
+            padding: 0 20px;
+            margin: 0 auto;
+        }
+
+        /* Header & Navigation - Matching Index */
+        header {
+            background-color: var(--navy);
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(42, 39, 80, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .logo i {
+            margin-right: 10px;
+            font-size: 24px;
+            color: var(--gold);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li a:hover {
+            color: var(--gold);
+        }
+
+        nav ul li a i {
+            margin-right: 8px;
+            font-size: 18px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar {
+            position: relative;
+            margin-right: 20px;
+        }
+
+        .search-bar input {
+            padding: 10px 15px 10px 40px;
+            border-radius: 25px;
+            border: 1px solid #ddd;
+            width: 250px;
+            font-size: 14px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .search-bar i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+        }
+
+        .cart-icon, .user-icon {
+            color: var(--white);
+            font-size: 20px;
+            margin-left: 20px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .cart-icon:hover, .user-icon:hover {
+            color: var(--gold);
+        }
+
+        .cart-count {
+            background-color: var(--gold);
+            color: var(--navy);
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: -8px;
+            right: -8px;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            color: var(--white);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .about-hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            background: linear-gradient(rgba(42, 39, 80, 0.9), rgba(90, 75, 156, 0.9)), url('https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            margin-bottom: 60px;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .about-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .about-hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: var(--beige);
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .btn-gold {
+            background-color: var(--gold);
+            color: var(--navy);
+        }
+
+        .btn-gold:hover {
+            background-color: #d0a04f;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(228, 180, 97, 0.3);
+        }
+
+        .btn-purple {
+            background-color: var(--purple);
+            color: var(--white);
+        }
+
+        .btn-purple:hover {
+            background-color: #4a3d84;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(90, 75, 156, 0.3);
+        }
+
+        .btn i {
+            margin-right: 8px;
+        }
+
+        /* Mission Section */
+        .mission-section {
+            padding: 80px 0;
+            background: var(--white);
+            border-radius: 30px;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--navy);
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: var(--gold);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .mission-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .mission-text h2 {
+            font-size: 32px;
+            color: var(--navy);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .mission-text p {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 17px;
+        }
+
+        .mission-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 25px 15px;
+            background: var(--light-gray);
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            background: var(--white);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--purple);
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .stat-label {
+            color: var(--navy);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .mission-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            height: 500px;
+        }
+
+        .mission-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .mission-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Our Story Section */
+        .story-section {
+            padding: 80px 0;
+            background: var(--light-gray);
+            border-radius: 30px;
+            margin-bottom: 60px;
+        }
+
+        .story-timeline {
+            max-width: 800px;
+            margin: 50px auto 0;
+            position: relative;
+        }
+
+        .story-timeline:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--purple);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-year {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .timeline-year span {
+            display: inline-block;
+            padding: 15px 25px;
+            background: var(--white);
+            border-radius: 50px;
+            color: var(--purple);
+            font-weight: 700;
+            font-size: 18px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 2px solid var(--purple);
+        }
+
+        .timeline-content {
+            flex: 2;
+            padding: 30px;
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .timeline-content:before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--white);
+            transform: rotate(45deg);
+            top: 30px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content:before {
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content:before {
+            left: -10px;
+        }
+
+        .timeline-content h3 {
+            font-size: 24px;
+            color: var(--navy);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .timeline-content p {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 80px 0;
+            background: var(--white);
+            border-radius: 30px;
+            margin-bottom: 60px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .team-member {
+            text-align: center;
+            padding: 30px 20px;
+            background: var(--light-gray);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            background: var(--white);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            border: 5px solid var(--white);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover .member-photo img {
+            transform: scale(1.1);
+        }
+
+        .member-info h3 {
+            font-size: 22px;
+            color: var(--navy);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .member-role {
+            color: var(--purple);
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .member-bio {
+            color: var(--gray);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .member-social {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .member-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--navy);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .member-social a:hover {
+            background: var(--purple);
+            transform: translateY(-3px);
+        }
+
+        /* Values Section */
+        .values-section {
+            padding: 80px 0;
+            background: var(--light-gray);
+            border-radius: 30px;
+            margin-bottom: 60px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 40px 25px;
+            background: var(--white);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--beige) 0%, var(--peach) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 32px;
+            color: var(--purple);
+        }
+
+        .value-card h3 {
+            font-size: 22px;
+            color: var(--navy);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .value-card p {
+            color: var(--gray);
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        /* CTA Section */
+        .about-cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--purple) 100%);
+            color: var(--white);
+            text-align: center;
+            border-radius: 30px;
+            margin-bottom: 60px;
+        }
+
+        .about-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .about-cta p {
+            font-size: 18px;
+            color: var(--beige);
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+
+        /* Footer - Matching Index */
+        footer {
+            background-color: var(--navy);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: var(--beige);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--gold);
+        }
+
+        .footer-column p {
+            color: var(--beige);
+            margin-bottom: 15px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--gold);
+            color: var(--navy);
+            transform: translateY(-3px);
+        }
+
+        .newsletter form {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        .newsletter input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 25px 0 0 25px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+        }
+
+        .newsletter input::placeholder {
+            color: var(--beige);
+        }
+
+        .newsletter button {
+            background-color: var(--gold);
+            color: var(--navy);
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 25px 25px 0;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .newsletter button:hover {
+            background-color: #d0a04f;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--beige);
+            font-size: 14px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .team-grid,
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .mission-content {
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .mission-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .mission-image {
+                height: 400px;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            
+            .story-timeline:before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                flex-direction: row !important;
+                margin-left: 60px;
+            }
+            
+            .timeline-year {
+                flex: 0;
+                position: absolute;
+                left: -60px;
+                top: 0;
+                padding: 0;
+            }
+            
+            .timeline-content:before {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-wrap: wrap;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                display: none;
+                width: 100%;
+                order: 3;
+                margin-top: 20px;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .search-bar input {
+                width: 200px;
+            }
+            
+            .about-hero h1 {
+                font-size: 32px;
+            }
+            
+            .about-hero p {
+                font-size: 18px;
+            }
+            
+            .section-title {
+                font-size: 30px;
+            }
+            
+            .team-grid,
+            .values-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 50px auto 0;
+            }
+            
+            .mission-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .about-hero {
+                padding: 80px 0 60px;
+            }
+            
+            .about-hero h1 {
+                font-size: 28px;
+            }
+            
+            .mission-image {
+                height: 300px;
+            }
+            
+            .timeline-item {
+                margin-left: 45px;
+            }
+            
+            .timeline-year {
+                left: -45px;
+            }
+            
+            .timeline-year span {
+                padding: 10px 15px;
+                font-size: 16px;
+            }
+            
+            .about-cta h2 {
+                font-size: 32px;
+            }
+            
+            .search-bar {
+                display: none;
+            }
+        }
+
+        /* Mobile Search Icon */
+        .search-icon-mobile {
+            display: none;
+            color: var(--white);
+            font-size: 20px;
+            cursor: pointer;
+            margin-left: 15px;
+            transition: color 0.3s;
+        }
+
+        .search-icon-mobile:hover {
+            color: var(--gold);
+        }
+
+        @media (max-width: 1200px) {
+            .header-container {
+                display: grid;
+                grid-template-columns: auto 1fr auto;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+                order: 1;
+                justify-content: flex-start;
+            }
+            
+            .logo {
+                order: 2;
+                justify-content: center;
+                text-align: center;
+                font-size: 24px;
+            }
+            
+            .header-actions {
+                order: 3;
+                justify-content: flex-end;
+                margin-right: 0;
+            }
+            
+            .search-bar {
+                display: none;
+            }
+            
+            .search-icon-mobile {
+                display: block;
+            }
+            
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--navy);
+                padding: 20px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                z-index: 999;
+                display: none;
+                order: 5;
+            }
+            
+            nav.active {
+                display: block;
+            }
+        }
+
+        
+
+
+
+/* Update container styles */
+.container {
+    max-width: 1400px; /* Changed from 100% */
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* For larger screens */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1500px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .container {
+        max-width: 1700px;
+    }
+}
+
+
+
+/* Base font size for desktop */
+@media (min-width: 1200px) {
+    body {
+        font-size: 16px;
+    }
+    
+    .hero h1,
+    .slide-content h1 {
+        font-size: 3.5rem; /* ~56px */
+    }
+    
+    .section-title {
+        font-size: 2.5rem; /* ~40px */
+    }
+    
+    .product-title,
+    .carousel-title {
+        font-size: 1.2rem; /* ~19px */
+    }
+}
+
+/* For very large screens */
+@media (min-width: 1600px) {
+    body {
+        font-size: 18px;
+    }
+    
+    .hero h1,
+    .slide-content h1 {
+        font-size: 4rem; /* ~64px */
+    }
+    
+    .section-title {
+        font-size: 2.8rem; /* ~45px */
+    }
+}
+
+/* Products grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* For larger screens */
+@media (min-width: 1600px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        max-width: 1500px;
+    }
+}
+
+/* Hero slider adjustments */
+.hero-slider {
+    position: relative;
+    height: 70vh; /* Changed from 600px */
+    max-height: 700px; /* Maximum height */
+    margin-bottom: 60px;
+    border-radius: 0 0 30px 30px;
+    overflow: hidden;
+}
+
+@media (min-width: 1600px) {
+    .hero-slider {
+        height: 65vh;
+        max-height: 750px;
+    }
+}
+
+/* Scale control for very large screens */
+@media (min-width: 1920px) {
+    :root {
+        font-size: 0.9em; /* Scales everything down by 10% */
+    }
+}
+
+@media (min-width: 2560px) {
+    :root {
+        font-size: 0.8em; /* Scales everything down by 20% */
+    }
+}
+
+/* Header container fix */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+
+
+/* Force specific aspect ratio (wider) */
+.logo img {
+    width: 250px; /* Width */
+    height: 65px; /* Height */
+    object-fit: cover; /* Fills the area, may crop */
+    border-radius: 40px;
+}
+
+
+
+/* SUPER SIMPLE FIX */
+@media (min-width: 768px) { html { zoom: 0.80; } } /* Desktop/iPad smaller */
+@media (max-width: 767px) and (min-width: 360px) { html { zoom: 0.70; } } /* Medium mobile smaller */
+@media (max-width: 399px) { 
+    .container { padding: 0 10px !important; }
+    .hero-slider { height: 300px !important; }
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+    <img src="images/toppel-quantum-logo.png" alt="Toppel Quantum Logo">
+</div>
+
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                    <li><a href="shop.html"><i class="fas fa-store"></i>Shop</a></li>
+                    <li><a href="services.html"><i class="fas fa-handshake"></i>Services</a></li>
+                    <li><a href="affiliates.html"><i class="fas fa-user-plus"></i>Affiliates</a></li>
+                    <li><a href="about.html" class="active"><i class="fas fa-info-circle"></i>About</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <i class="fas fa-user user-icon"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>Our Quantum Story</h1>
+            <p>Discover how Toppel Quantum is revolutionizing wellness through the fusion of ancient wisdom and quantum science.</p>
+            <a href="#story" class="btn btn-gold">
+                <i class="fas fa-book-open"></i> Read Our Story
+            </a>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section container">
+        <h2 class="section-title">Our Mission & Vision</h2>
+        <div class="mission-content">
+            <div class="mission-text">
+                <h2>Quantum Wellness for Everyone</h2>
+                <p>At Toppel Quantum, we believe that optimal health and vitality are your birthright. Our mission is to make quantum wellness accessible to all through innovative products and transformative services.</p>
+                <p>We combine cutting-edge quantum science with time-tested healing modalities to create solutions that work at the cellular level, helping you achieve balance, energy, and wellbeing.</p>
+                <p>Our vision is a world where everyone can access the healing power of quantum energy, transforming lives one vibration at a time.</p>
+                
+                <div class="mission-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Products</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Experts</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Support</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mission-image">
+                <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Toppel Quantum Mission">
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="story" class="story-section container">
+        <h2 class="section-title">Our Journey</h2>
+        <div class="story-timeline">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-year">
+                    <span>2018</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>The Beginning</h3>
+                    <p>Founded by a group of quantum physicists and wellness experts who discovered the profound healing potential of quantum energy fields. Started with research and development of our first quantum energy products.</p>
+                </div>
+            </div>
+            
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item">
+                <div class="timeline-year">
+                    <span>2019</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>First Quantum Products</h3>
+                    <p>Launched our initial product line of quantum-infused essential oils and wellness tools. Gained recognition for innovative approach to holistic health through quantum principles.</p>
+                </div>
+            </div>
+            
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item">
+                <div class="timeline-year">
+                    <span>2020</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>Expansion & Recognition</h3>
+                    <p>Expanded our product range to include quantum wellness devices. Received industry awards for innovation in holistic health solutions. Built a community of over 5,000 wellness enthusiasts.</p>
+                </div>
+            </div>
+            
+            <!-- Timeline Item 4 -->
+            <div class="timeline-item">
+                <div class="timeline-year">
+                    <span>2022</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>Services Launch</h3>
+                    <p>Introduced our quantum wellness services including energy therapy, cellular activation, and stress management programs. Trained and certified 50+ quantum wellness practitioners.</p>
+                </div>
+            </div>
+            
+            <!-- Timeline Item 5 -->
+            <div class="timeline-item">
+                <div class="timeline-year">
+                    <span>2023</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>Quantum Marketplace</h3>
+                    <p>Launched the complete Toppel Quantum Marketplace, offering products, services, and digital resources. Reached 10,000+ clients worldwide and established partnerships with wellness centers globally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    
+
+    <!-- Values Section -->
+    <section class="values-section container">
+        <h2 class="section-title">Our Quantum Values</h2>
+        <div class="values-grid">
+            <!-- Value 1 -->
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-atom"></i>
+                </div>
+                <h3>Quantum Innovation</h3>
+                <p>Constantly pushing boundaries of what's possible in wellness through quantum science and innovative thinking.</p>
+            </div>
+            
+            <!-- Value 2 -->
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Holistic Care</h3>
+                <p>Treating the whole person—body, mind, and spirit—through integrated quantum wellness approaches.</p>
+            </div>
+            
+            <!-- Value 3 -->
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Integrity First</h3>
+                <p>Maintaining the highest standards of quality, transparency, and ethical practices in everything we do.</p>
+            </div>
+            
+            <!-- Value 4 -->
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Global Impact</h3>
+                <p>Making quantum wellness accessible to people worldwide, transforming lives across cultures and communities.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="about-cta container">
+        <h2>Join Our Quantum Wellness Community</h2>
+        <p>Become part of a growing community dedicated to optimal health, vitality, and wellbeing through quantum principles.</p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <a href="shop.html" class="btn btn-gold">
+                <i class="fas fa-shopping-cart"></i> Shop Products
+            </a>
+            <a href="services.html" class="btn btn-purple">
+                <i class="fas fa-spa"></i> Explore Services
+            </a>
+            <a href="contact.html" class="btn btn-gold">
+                <i class="fas fa-headset"></i> Contact Us
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Toppel Quantum</h3>
+                    <p>Your premier destination for quantum wellness products and services</p>
+                    <div class="social-icons">
+            <a href="https://www.instagram.com/toppel_quantum_wellness/#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/toppel_quantum_wellness/#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@toppel_quantum_wellness" class="social-link"><i class="fab fa-tiktok"></i></a>
+            <a href="mailto:tesogeyi@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column newsletter">
+                    <h3>Quantum Insights</h3>
+                    <p>Subscribe for wellness tips and quantum science updates.</p>
+                    <form>
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Toppel Quantum. All rights reserved. | <a href="#" style="color: var(--gold);">Privacy Policy</a> | <a href="#" style="color: var(--gold);">Terms of Service</a> | powered by <a href="https://ebassgroup.web.app" target="_blank" rel="noopener noreferrer" style="color: var(--gold);">Ebass Group</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if(this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Update cart count
+        function updateCartCount() {
+            const cartCount = document.querySelector('.cart-count');
+            cartCount.textContent = '0'; // Start with 0 for about page
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
+        });
+
+        // Newsletter form submission
+        document.querySelector('.newsletter form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input').value;
+            if (email) {
+                alert(`Thank you for subscribing with: ${email}\nYou'll receive quantum wellness insights soon!`);
+                this.reset();
+            }
+        });
+
+        // Animate stats on scroll
+        const statNumbers = document.querySelectorAll('.stat-number');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const stat = entry.target;
+                    const targetNumber = parseInt(stat.textContent);
+                    let currentNumber = 0;
+                    const increment = targetNumber / 50;
+                    
+                    const timer = setInterval(() => {
+                        currentNumber += increment;
+                        if (currentNumber >= targetNumber) {
+                            stat.textContent = targetNumber + '+';
+                            clearInterval(timer);
+                        } else {
+                            stat.textContent = Math.floor(currentNumber) + '+';
+                        }
+                    }, 30);
+                    
+                    observer.unobserve(stat);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        statNumbers.forEach(stat => observer.observe(stat));
+    </script>
+</body>
+</html>

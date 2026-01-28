@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Toppel Quantum</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --navy: #2A2750;
+            --gold: #E4B461;
+            --purple: #5A4B9C;
+            --beige: #F4E8DA;
+            --white: #FFFFFF;
+            --light-gray: #F8F8F8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-gray);
+            color: var(--navy);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .checkout-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--purple) 100%);
+            color: var(--white);
+            border-radius: 15px;
+        }
+
+        .checkout-header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .checkout-grid {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 30px;
+        }
+
+        .order-summary {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .order-summary h2 {
+            margin-bottom: 20px;
+            color: var(--navy);
+            border-bottom: 2px solid var(--beige);
+            padding-bottom: 10px;
+        }
+
+        .order-items {
+            margin-bottom: 30px;
+        }
+
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .order-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 20px 0;
+            border-top: 2px solid var(--beige);
+            margin-top: 20px;
+        }
+
+        .checkout-form {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .checkout-form h2 {
+            margin-bottom: 20px;
+            color: var(--navy);
+            border-bottom: 2px solid var(--beige);
+            padding-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--navy);
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--beige);
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--purple);
+            box-shadow: 0 0 0 2px rgba(90, 75, 156, 0.1);
+        }
+
+        .payment-methods {
+            margin: 30px 0;
+        }
+
+        .payment-methods h3 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .payment-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .payment-option {
+            text-align: center;
+            padding: 15px;
+            border: 2px solid var(--beige);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .payment-option:hover,
+        .payment-option.selected {
+            border-color: var(--purple);
+            background: rgba(90, 75, 156, 0.05);
+        }
+
+        .payment-option i {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--purple);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 15px;
+            background: var(--gold);
+            color: var(--navy);
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background: #d0a04f;
+            transform: translateY(-2px);
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 768px) {
+            .checkout-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .payment-options {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+/* SUPER SIMPLE FIX */
+@media (min-width: 768px) { html { zoom: 0.80; } } /* Desktop/iPad smaller */
+@media (max-width: 767px) and (min-width: 360px) { html { zoom: 0.70; } } /* Medium mobile smaller */
+@media (max-width: 399px) { 
+    .container { padding: 0 10px !important; }
+    .hero-slider { height: 300px !important; }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="checkout-header">
+            <h1>Complete Your Purchase</h1>
+            <p>Secure checkout with Paystack</p>
+        </header>
+
+        <div class="checkout-grid">
+            <!-- Order Summary Section -->
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div class="order-items" id="order-items">
+                    <!-- Cart items will be loaded here -->
+                </div>
+                <div class="order-total">
+                    <span>Total:</span>
+                    <span id="total-amount">₦0.00</span>
+                </div>
+            </div>
+
+            <!-- Checkout Form Section -->
+            <div class="checkout-form">
+                <h2>Payment Details</h2>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" placeholder="[email protected]" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" placeholder="John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="+2348012345678">
+                </div>
+
+                <div class="payment-methods">
+                    <h3>Select Payment Method</h3>
+                    <div class="payment-options">
+                        <div class="payment-option selected" data-method="card">
+                            <i class="fas fa-credit-card"></i>
+                            <div>Card</div>
+                        </div>
+                        <div class="payment-option" data-method="bank">
+                            <i class="fas fa-university"></i>
+                            <div>Bank</div>
+                        </div>
+                        <div class="payment-option" data-method="transfer">
+                            <i class="fas fa-exchange-alt"></i>
+                            <div>Transfer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn" id="pay-button">
+                    <i class="fas fa-lock"></i> Pay Now
+                </button>
+
+                <div class="paystack-info">
+                    <p style="text-align: center; margin-top: 20px; color: var(--purple); font-size: 12px;">
+                        <i class="fas fa-shield-alt"></i> Secured by Paystack
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Paystack Integration Script -->
+    <script src="https://js.paystack.co/v2/inline.js"></script>
+    
+    <script>
+        // Replace with your Paystack Public Key (Test or Live)
+        const PAYSTACK_PUBLIC_KEY = 'pk_test_your_public_key_here'; // Get from Paystack Dashboard[citation:2][citation:7]
+        let selectedPaymentMethod = 'card';
+
+        // Load cart from localStorage
+        function loadCart() {
+            const cart = JSON.parse(localStorage.getItem('toppelQuantumCart')) || [];
+            const orderItemsContainer = document.getElementById('order-items');
+            const totalAmountElement = document.getElementById('total-amount');
+            
+            orderItemsContainer.innerHTML = '';
+            let total = 0;
+            
+            if (cart.length === 0) {
+                orderItemsContainer.innerHTML = '<p style="text-align: center; color: var(--gray);">Your cart is empty</p>';
+                totalAmountElement.textContent = '₦0.00';
+                return;
+            }
+            
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                
+                const itemHTML = `
+                    <div class="order-item">
+                        <div>
+                            <strong>${item.name}</strong>
+                            <div style="font-size: 14px; color: var(--gray);">
+                                Qty: ${item.quantity} × ₦${item.price.toFixed(2)}
+                            </div>
+                        </div>
+                        <div>₦${itemTotal.toFixed(2)}</div>
+                    </div>
+                `;
+                orderItemsContainer.innerHTML += itemHTML;
+            });
+            
+            totalAmountElement.textContent = `₦${total.toFixed(2)}`;
+            return total;
+        }
+
+        // Payment method selection
+        document.querySelectorAll('.payment-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.payment-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                this.classList.add('selected');
+                selectedPaymentMethod = this.getAttribute('data-method');
+            });
+        });
+
+        // Paystack Payment Function
+        document.getElementById('pay-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const total = loadCart() * 100; // Convert to kobo[citation:2]
+            
+            if (!email || !name) {
+                alert('Please fill in all required fields');
+                return;
+            }
+            
+            if (total <= 0) {
+                alert('Your cart is empty');
+                return;
+            }
+            
+            // Disable button while processing
+            this.disabled = true;
+            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+            
+            // Initialize Paystack payment[citation:8]
+            const handler = PaystackPop.setup({
+                key: PAYSTACK_PUBLIC_KEY,
+                email: email,
+                amount: total,
+                currency: 'NGN',
+                metadata: {
+                    name: name,
+                    phone: phone,
+                    cart_id: localStorage.getItem('cartSessionId') || 'cart_' + Date.now()
+                },
+                callback: function(response) {
+                    // Payment successful[citation:4]
+                    alert('Payment successful! Transaction reference: ' + response.reference);
+                    
+                    // Clear cart after successful payment
+                    localStorage.removeItem('toppelQuantumCart');
+                    
+                    // Redirect to success pages
+                    window.location.href = 'success.html?reference=' + response.reference;
+                },
+                onClose: function() {
+                    // Payment cancelled[citation:4]
+                    document.getElementById('pay-button').disabled = false;
+                    document.getElementById('pay-button').innerHTML = '<i class="fas fa-lock"></i> Pay Now';
+                    alert('Payment was cancelled. You can try again.');
+                }
+            });
+            
+            handler.openIframe();
+        });
+
+        // Load cart on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadCart();
+            
+            // Set default email if available
+            const userEmail = localStorage.getItem('userEmail');
+            if (userEmail) {
+                document.getElementById('email').value = userEmail;
+            }
+        });
+    </script>
+</body>
+</html>

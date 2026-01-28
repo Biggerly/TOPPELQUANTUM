@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toppel Quantum | Premium Wellness Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #2A2750;
+            --gold: #E4B461;
+            --purple: #5A4B9C;
+            --beige: #F4E8DA;
+            --peach: #EED9C6;
+            --white: #FFFFFF;
+            --light-gray: #F8F8F8;
+            --gray: #777777;
+            --dark-gray: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--beige) 0%, var(--peach) 100%);
+            color: var(--navy);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            padding: 0 20px;
+            margin: 0 auto;
+        }
+
+        /* Header & Navigation - Matching Index */
+        header {
+            background-color: var(--navy);
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(42, 39, 80, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .logo i {
+            margin-right: 10px;
+            font-size: 24px;
+            color: var(--gold);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li a:hover {
+            color: var(--gold);
+        }
+
+        nav ul li a i {
+            margin-right: 8px;
+            font-size: 18px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar {
+            position: relative;
+            margin-right: 20px;
+        }
+
+        .search-bar input {
+            padding: 10px 15px 10px 40px;
+            border-radius: 25px;
+            border: 1px solid #ddd;
+            width: 250px;
+            font-size: 14px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .search-bar i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+        }
+
+        .cart-icon, .user-icon {
+            color: var(--white);
+            font-size: 20px;
+            margin-left: 20px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .cart-icon:hover, .user-icon:hover {
+            color: var(--gold);
+        }
+
+        .cart-count {
+            background-color: var(--gold);
+            color: var(--navy);
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: -8px;
+            right: -8px;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            color: var(--white);
+            cursor: pointer;
+        }
+
+        /* Hero Section for Services Page */
+        .services-hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            background: linear-gradient(rgba(42, 39, 80, 0.9), rgba(90, 75, 156, 0.9)), url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            margin-bottom: 60px;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .services-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .services-hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: var(--beige);
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .btn-gold {
+            background-color: var(--gold);
+            color: var(--navy);
+        }
+
+        .btn-gold:hover {
+            background-color: #d0a04f;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(228, 180, 97, 0.3);
+        }
+
+        .btn-purple {
+            background-color: var(--purple);
+            color: var(--white);
+        }
+
+        .btn-purple:hover {
+            background-color: #4a3d84;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(90, 75, 156, 0.3);
+        }
+
+        .btn i {
+            margin-right: 8px;
+        }
+
+        /* Services Intro Section */
+        .services-intro {
+            padding: 60px 0;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .services-intro h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--navy);
+        }
+
+        .services-intro p {
+            font-size: 18px;
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        /* Main Services Grid */
+        .services-grid {
+            padding: 60px 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-image {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.05);
+        }
+
+        .service-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 0%, rgba(42, 39, 80, 0.7) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .service-card:hover .service-overlay {
+            opacity: 1;
+        }
+
+        .service-overlay .btn {
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .service-overlay .btn {
+            transform: translateY(0);
+        }
+
+        .service-content {
+            padding: 30px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-icon {
+            font-size: 40px;
+            color: var(--purple);
+            margin-bottom: 20px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--beige) 0%, var(--peach) 100%);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        .service-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: var(--navy);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .service-subtitle {
+            font-size: 18px;
+            color: var(--gold);
+            font-weight: 500;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .service-description {
+            color: var(--gray);
+            line-height: 1.7;
+            margin-bottom: 25px;
+            flex: 1;
+        }
+
+        .service-features {
+            margin-bottom: 30px;
+        }
+
+        .service-features h4 {
+            font-size: 16px;
+            color: var(--navy);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .service-features ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .service-features li {
+            padding: 8px 0;
+            color: var(--gray);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-features li:before {
+            content: '✓';
+            color: var(--purple);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .service-pricing {
+            background: var(--light-gray);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: auto;
+        }
+
+        .service-price {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 10px;
+        }
+
+        .service-duration {
+            color: var(--gray);
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .service-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            padding: 80px 0;
+            background: var(--white);
+            border-radius: 30px;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--navy);
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: var(--gold);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 30px 20px;
+            background: var(--light-gray);
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .process-step:hover {
+            transform: translateY(-10px);
+            background: var(--white);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--purple);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+
+        .process-step h4 {
+            font-size: 20px;
+            color: var(--navy);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .process-step p {
+            color: var(--gray);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* Testimonials Section */
+        .services-testimonials {
+            padding: 80px 0;
+            background: var(--light-gray);
+            border-radius: 30px;
+            margin-bottom: 60px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .testimonial-rating {
+            color: var(--gold);
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--navy);
+            line-height: 1.7;
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .testimonial-author h5 {
+            font-size: 16px;
+            color: var(--navy);
+            margin-bottom: 5px;
+        }
+
+        .testimonial-author span {
+            font-size: 14px;
+            color: var(--gray);
+        }
+
+        /* CTA Section */
+        .services-cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--purple) 100%);
+            color: var(--white);
+            text-align: center;
+            border-radius: 30px;
+            margin-bottom: 60px;
+        }
+
+        .services-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .services-cta p {
+            font-size: 18px;
+            color: var(--beige);
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+
+        /* Footer - Matching Index */
+        footer {
+            background-color: var(--navy);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: var(--beige);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--gold);
+        }
+
+        .footer-column p {
+            color: var(--beige);
+            margin-bottom: 15px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--gold);
+            color: var(--navy);
+            transform: translateY(-3px);
+        }
+
+        .newsletter form {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        .newsletter input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 25px 0 0 25px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+        }
+
+        .newsletter input::placeholder {
+            color: var(--beige);
+        }
+
+        .newsletter button {
+            background-color: var(--gold);
+            color: var(--navy);
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 25px 25px 0;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .newsletter button:hover {
+            background-color: #d0a04f;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--beige);
+            font-size: 14px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                max-width: 800px;
+                margin: 0 auto 60px;
+            }
+            
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .testimonial-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .services-hero h1 {
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-wrap: wrap;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                display: none;
+                width: 100%;
+                order: 3;
+                margin-top: 20px;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .search-bar input {
+                width: 200px;
+            }
+            
+            .services-hero h1 {
+                font-size: 32px;
+            }
+            
+            .services-hero p {
+                font-size: 18px;
+            }
+            
+            .section-title {
+                font-size: 30px;
+            }
+            
+            .service-actions {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .services-hero {
+                padding: 80px 0 60px;
+            }
+            
+            .services-hero h1 {
+                font-size: 28px;
+            }
+            
+            .service-content h3 {
+                font-size: 24px;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-cta h2 {
+                font-size: 32px;
+            }
+            
+            .search-bar {
+                display: none;
+            }
+        }
+
+        /* Mobile Search Icon */
+        .search-icon-mobile {
+            display: none;
+            color: var(--white);
+            font-size: 20px;
+            cursor: pointer;
+            margin-left: 15px;
+            transition: color 0.3s;
+        }
+
+        .search-icon-mobile:hover {
+            color: var(--gold);
+        }
+
+        @media (max-width: 1200px) {
+            .header-container {
+                display: grid;
+                grid-template-columns: auto 1fr auto;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+                order: 1;
+                justify-content: flex-start;
+            }
+            
+            .logo {
+                order: 2;
+                justify-content: center;
+                text-align: center;
+                font-size: 24px;
+            }
+            
+            .header-actions {
+                order: 3;
+                justify-content: flex-end;
+                margin-right: 0;
+            }
+            
+            .search-bar {
+                display: none;
+            }
+            
+            .search-icon-mobile {
+                display: block;
+            }
+            
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--navy);
+                padding: 20px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                z-index: 999;
+                display: none;
+                order: 5;
+            }
+            
+            nav.active {
+                display: block;
+            }
+        }
+
+        /* Modal Styles for Booking */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(42, 39, 80, 0.95);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .booking-modal {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--gray);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .close-modal:hover {
+            background-color: var(--beige);
+            color: var(--navy);
+        }
+
+
+
+
+
+
+/* SUPER SIMPLE FIX */
+@media (min-width: 768px) { html { zoom: 0.80; } } /* Desktop/iPad smaller */
+@media (max-width: 767px) and (min-width: 360px) { html { zoom: 0.70; } } /* Medium mobile smaller */
+@media (max-width: 399px) { 
+    .container { padding: 0 10px !important; }
+    .hero-slider { height: 300px !important; }
+}
+
+
+
+
+
+        
+
+
+
+/* Update container styles */
+.container {
+    max-width: 1400px; /* Changed from 100% */
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* For larger screens */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1500px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .container {
+        max-width: 1700px;
+    }
+}
+
+
+
+/* Base font size for desktop */
+@media (min-width: 1200px) {
+    body {
+        font-size: 16px;
+    }
+    
+    .hero h1,
+    .slide-content h1 {
+        font-size: 3.5rem; /* ~56px */
+    }
+    
+    .section-title {
+        font-size: 2.5rem; /* ~40px */
+    }
+    
+    .product-title,
+    .carousel-title {
+        font-size: 1.2rem; /* ~19px */
+    }
+}
+
+/* For very large screens */
+@media (min-width: 1600px) {
+    body {
+        font-size: 18px;
+    }
+    
+    .hero h1,
+    .slide-content h1 {
+        font-size: 4rem; /* ~64px */
+    }
+    
+    .section-title {
+        font-size: 2.8rem; /* ~45px */
+    }
+}
+
+/* Products grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* For larger screens */
+@media (min-width: 1600px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        max-width: 1500px;
+    }
+}
+
+/* Hero slider adjustments */
+.hero-slider {
+    position: relative;
+    height: 70vh; /* Changed from 600px */
+    max-height: 700px; /* Maximum height */
+    margin-bottom: 60px;
+    border-radius: 0 0 30px 30px;
+    overflow: hidden;
+}
+
+@media (min-width: 1600px) {
+    .hero-slider {
+        height: 65vh;
+        max-height: 750px;
+    }
+}
+
+/* Scale control for very large screens */
+@media (min-width: 1920px) {
+    :root {
+        font-size: 0.9em; /* Scales everything down by 10% */
+    }
+}
+
+@media (min-width: 2560px) {
+    :root {
+        font-size: 0.8em; /* Scales everything down by 20% */
+    }
+}
+
+/* Header container fix */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+
+
+/* Force specific aspect ratio (wider) */
+.logo img {
+    width: 250px; /* Width */
+    height: 65px; /* Height */
+    object-fit: cover; /* Fills the area, may crop */
+    border-radius: 40px;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+    <img src="images/toppel-quantum-logo.png" alt="Toppel Quantum Logo">
+</div>
+
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                    <li><a href="shop.html"><i class="fas fa-store"></i>Shop</a></li>
+                    <li><a href="services.html" class="active"><i class="fas fa-handshake"></i>Services</a></li>
+                    <li><a href="affiliates.html"><i class="fas fa-user-plus"></i>Affiliates</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i>About</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search services...">
+                </div>
+                <div class="search-icon-mobile">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div style="position: relative;">
+                    <i class="fas fa-shopping-cart cart-icon"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <i class="fas fa-user user-icon"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Hero Section -->
+    <section class="services-hero">
+        <div class="container">
+            <h1>Quantum Wellness Services</h1>
+            <p>Experience transformative healing through our premium quantum energy services. Restore balance, boost vitality, and achieve optimal wellbeing.</p>
+            <a href="#services" class="btn btn-gold">
+                <i class="fas fa-spa"></i> Explore Services
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Intro -->
+    <section class="services-intro container">
+        <h2>Transform Your Wellbeing</h2>
+        <p>Our quantum wellness services combine ancient healing wisdom with modern energy science. Each service is designed to work at a cellular level, helping you achieve balance, vitality, and optimal health.</p>
+        <div class="service-actions">
+            <a href="#booking" class="btn btn-purple">
+                <i class="fas fa-calendar-check"></i> Book Consultation
+            </a>
+        </div>
+    </section>
+
+    <!-- Main Services Grid -->
+    <section id="services" class="container services-grid">
+        <!-- Service 1: Quantum Energy Therapy -->
+        <div class="service-card">
+            <div class="service-image">
+                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Quantum Energy Therapy">
+                <div class="service-overlay">
+                    <a href="#" class="btn btn-gold book-service-btn" data-service="Quantum Energy Therapy">
+                        <i class="fas fa-calendar-alt"></i> Book Now
+                    </a>
+                </div>
+            </div>
+            <div class="service-content">
+                <div class="service-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Quantum Energy Therapy</h3>
+                <div class="service-subtitle">Restore energy & boost vitality</div>
+                <div class="service-description">
+                    Our Quantum Energy Therapy uses advanced energy techniques to clear blockages, restore your natural energy flow, and boost overall vitality. This transformative session works at the quantum level to harmonize your body's energy systems.
+                </div>
+                <div class="service-features">
+                    <h4>What to Expect:</h4>
+                    <ul>
+                        <li>Deep energy cleansing and rebalancing</li>
+                        <li>Chakra alignment and activation</li>
+                        <li>Quantum field harmonization</li>
+                        <li>Vitality enhancement techniques</li>
+                        <li>Personalized energy assessment</li>
+                    </ul>
+                </div>
+                <div class="service-pricing">
+                    <div class="service-price">₦25,000</div>
+                    <div class="service-duration">90-minute session</div>
+                    <div class="service-actions">
+                        <a href="#" class="btn btn-purple book-service-btn" data-service="Quantum Energy Therapy">
+                            <i class="fas fa-calendar-alt"></i> Book Session
+                        </a>
+                        <a href="#" class="btn btn-details">
+                            <i class="fas fa-info-circle"></i> Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 2: Stress & Sleep Improvement -->
+        <div class="service-card">
+            <div class="service-image">
+                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Stress & Sleep Improvement">
+                <div class="service-overlay">
+                    <a href="#" class="btn btn-gold book-service-btn" data-service="Stress & Sleep Improvement">
+                        <i class="fas fa-calendar-alt"></i> Book Now
+                    </a>
+                </div>
+            </div>
+            <div class="service-content">
+                <div class="service-icon">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <h3>Stress & Sleep Improvement</h3>
+                <div class="service-subtitle">Relax mind & improve sleep</div>
+                <div class="service-description">
+                    Combat modern stress and achieve restful sleep through our specialized quantum relaxation techniques. This service combines guided meditation, energy balancing, and sleep optimization protocols.
+                </div>
+                <div class="service-features">
+                    <h4>What to Expect:</h4>
+                    <ul>
+                        <li>Stress reduction techniques</li>
+                        <li>Sleep pattern optimization</li>
+                        <li>Mind relaxation protocols</li>
+                        <li>Quantum meditation guidance</li>
+                        <li>Sleep hygiene planning</li>
+                    </ul>
+                </div>
+                <div class="service-pricing">
+                    <div class="service-price">₦18,000</div>
+                    <div class="service-duration">60-minute session</div>
+                    <div class="service-actions">
+                        <a href="#" class="btn btn-purple book-service-btn" data-service="Stress & Sleep Improvement">
+                            <i class="fas fa-calendar-alt"></i> Book Session
+                        </a>
+                        <a href="#" class="btn btn-details">
+                            <i class="fas fa-info-circle"></i> Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 3: Detox & Immune Support -->
+        <div class="service-card">
+            <div class="service-image">
+                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Detox & Immune Support">
+                <div class="service-overlay">
+                    <a href="#" class="btn btn-gold book-service-btn" data-service="Detox & Immune Support">
+                        <i class="fas fa-calendar-alt"></i> Book Now
+                    </a>
+                </div>
+            </div>
+            <div class="service-content">
+                <div class="service-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Detox & Immune Support</h3>
+                <div class="service-subtitle">Remove toxins & strengthen immunity</div>
+                <div class="service-description">
+                    Boost your body's natural detoxification processes and strengthen your immune system with our quantum-enhanced protocols. This service targets toxin removal at the cellular level.
+                </div>
+                <div class="service-features">
+                    <h4>What to Expect:</h4>
+                    <ul>
+                        <li>Cellular detoxification</li>
+                        <li>Immune system activation</li>
+                        <li>Toxin removal protocols</li>
+                        <li>Organ system support</li>
+                        <li>Personalized detox plan</li>
+                    </ul>
+                </div>
+                <div class="service-pricing">
+                    <div class="service-price">₦22,000</div>
+                    <div class="service-duration">75-minute session</div>
+                    <div class="service-actions">
+                        <a href="#" class="btn btn-purple book-service-btn" data-service="Detox & Immune Support">
+                            <i class="fas fa-calendar-alt"></i> Book Session
+                        </a>
+                        <a href="#" class="btn btn-details">
+                            <i class="fas fa-info-circle"></i> Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 4: Cellular Activation -->
+        <div class="service-card">
+            <div class="service-image">
+                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Cellular Activation">
+                <div class="service-overlay">
+                    <a href="#" class="btn btn-gold book-service-btn" data-service="Cellular Activation">
+                        <i class="fas fa-calendar-alt"></i> Book Now
+                    </a>
+                </div>
+            </div>
+            <div class="service-content">
+                <div class="service-icon">
+                    <i class="fas fa-battery-full"></i>
+                </div>
+                <h3>Cellular Activation</h3>
+                <div class="service-subtitle">Revitalize cells & boost energy</div>
+                <div class="service-description">
+                    Activate your cells' natural healing potential and boost cellular energy production. This advanced service works at the mitochondrial level to enhance your body's natural vitality.
+                </div>
+                <div class="service-features">
+                    <h4>What to Expect:</h4>
+                    <ul>
+                        <li>Cellular energy optimization</li>
+                        <li>Mitochondrial activation</li>
+                        <li>DNA repair support</li>
+                        <li>Cellular regeneration</li>
+                        <li>Vitality enhancement</li>
+                    </ul>
+                </div>
+                <div class="service-pricing">
+                    <div class="service-price">₦30,000</div>
+                    <div class="service-duration">120-minute session</div>
+                    <div class="service-actions">
+                        <a href="#" class="btn btn-purple book-service-btn" data-service="Cellular Activation">
+                            <i class="fas fa-calendar-alt"></i> Book Session
+                        </a>
+                        <a href="#" class="btn btn-details">
+                            <i class="fas fa-info-circle"></i> Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works container">
+        <h2 class="section-title">How Our Services Work</h2>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h4>Initial Consultation</h4>
+                <p>We assess your energy levels and discuss your wellness goals to create a personalized plan.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h4>Quantum Assessment</h4>
+                <p>Using advanced techniques, we identify energy blockages and areas needing attention.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h4>Healing Session</h4>
+                <p>Experience our specialized quantum healing techniques in a comfortable, peaceful setting.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h4>Follow-up Support</h4>
+                <p>Receive guidance and support to maintain your results and continue your wellness journey.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="services-testimonials container">
+        <h2 class="section-title">Client Transformations</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"The Quantum Energy Therapy changed my life. I had chronic fatigue for years, and after just three sessions, my energy levels are better than ever!"</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sarah M.">
+                    <div>
+                        <h5>Sarah M.</h5>
+                        <span>Quantum Energy Therapy Client</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="testimonial-text">"After the Stress & Sleep Improvement program, I'm sleeping through the night for the first time in years. The techniques are simple and effective."</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Michael T.">
+                    <div>
+                        <h5>Michael T.</h5>
+                        <span>Sleep Program Participant</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"The Cellular Activation service gave me energy I haven't felt since I was in my 20s. It's incredible how much better I feel at a cellular level."</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Amanda R.">
+                    <div>
+                        <h5>Amanda R.</h5>
+                        <span>Cellular Activation Client</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="booking" class="services-cta container">
+        <h2>Ready to Transform Your Wellbeing?</h2>
+        <p>Take the first step towards optimal health and vitality. Book your initial consultation today and experience the power of quantum healing.</p>
+        <div class="service-actions" style="justify-content: center;">
+            <a href="#" class="btn btn-gold">
+                <i class="fas fa-calendar-check"></i> Book Your Consultation
+            </a>
+            <a href="contact.html" class="btn btn-purple">
+                <i class="fas fa-headset"></i> Contact Us
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Toppel Quantum</h3>
+                    <p>Your premier destination for quantum wellness services</p>
+                    <div class="social-icons">
+            <a href="https://www.instagram.com/toppel_quantum_wellness/#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/toppel_quantum_wellness/#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@toppel_quantum_wellness" class="social-link"><i class="fab fa-tiktok"></i></a>
+            <a href="mailto:tesogeyi@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#services">Quantum Energy Therapy</a></li>
+                        <li><a href="#services">Stress & Sleep Improvement</a></li>
+                        <li><a href="#services">Detox & Immune Support</a></li>
+                        <li><a href="#services">Cellular Activation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column newsletter">
+                    <h3>Wellness Newsletter</h3>
+                    <p>Subscribe for quantum wellness tips and service updates.</p>
+                    <form>
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Toppel Quantum. All rights reserved. | <a href="#" style="color: var(--gold);">Privacy Policy</a> | <a href="#" style="color: var(--gold);">Terms of Service</a> | powered by <a href="https://ebassgroup.web.app" target="_blank" rel="noopener noreferrer" style="color: var(--gold);">Ebass Group</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal-overlay" id="bookingModal">
+        <div class="booking-modal">
+            <button class="close-modal" id="closeModal">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2>Book Your Service</h2>
+            <p id="selectedServiceText">Service: <span id="serviceName"></span></p>
+            <form id="bookingForm">
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; color: var(--navy); font-weight: 500;">Service</label>
+                    <select style="width: 100%; padding: 12px; border: 2px solid var(--beige); border-radius: 10px; font-size: 16px; background-color: var(--light-gray);">
+                        <option value="quantum-energy">Quantum Energy Therapy - ₦25,000</option>
+                        <option value="stress-sleep">Stress & Sleep Improvement - ₦18,000</option>
+                        <option value="detox-immune">Detox & Immune Support - ₦22,000</option>
+                        <option value="cellular">Cellular Activation - ₦30,000</option>
+                    </select>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; color: var(--navy); font-weight: 500;">Preferred Date</label>
+                    <input type="date" style="width: 100%; padding: 12px; border: 2px solid var(--beige); border-radius: 10px; font-size: 16px; background-color: var(--light-gray);" min="2024-01-01">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; color: var(--navy); font-weight: 500;">Time Slot</label>
+                    <select style="width: 100%; padding: 12px; border: 2px solid var(--beige); border-radius: 10px; font-size: 16px; background-color: var(--light-gray);">
+                        <option>9:00 AM - 10:30 AM</option>
+                        <option>11:00 AM - 12:30 PM</option>
+                        <option>2:00 PM - 3:30 PM</option>
+                        <option>4:00 PM - 5:30 PM</option>
+                    </select>
+                </div>
+                <div style="margin-bottom: 30px;">
+                    <label style="display: block; margin-bottom: 8px; color: var(--navy); font-weight: 500;">Special Requirements</label>
+                    <textarea rows="4" placeholder="Any specific concerns or requirements..." style="width: 100%; padding: 12px; border: 2px solid var(--beige); border-radius: 10px; font-size: 16px; background-color: var(--light-gray); resize: vertical;"></textarea>
+                </div>
+                <button type="submit" class="btn btn-purple" style="width: 100%;">
+                    <i class="fas fa-calendar-check"></i> Confirm Booking
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+
+        // Booking Modal Functionality
+        const bookingModal = document.getElementById('bookingModal');
+        const closeModalBtn = document.getElementById('closeModal');
+        const serviceNameSpan = document.getElementById('serviceName');
+        const bookServiceBtns = document.querySelectorAll('.book-service-btn');
+        const bookingForm = document.getElementById('bookingForm');
+
+        // Open modal when clicking any book button
+        bookServiceBtns.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const serviceName = this.getAttribute('data-service');
+                serviceNameSpan.textContent = serviceName;
+                bookingModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close modal
+        closeModalBtn.addEventListener('click', function() {
+            bookingModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close modal when clicking outside
+        bookingModal.addEventListener('click', function(e) {
+            if (e.target === bookingModal) {
+                bookingModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && bookingModal.classList.contains('active')) {
+                bookingModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Form submission
+        bookingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your booking request! We will contact you shortly to confirm your appointment.');
+            bookingModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            this.reset();
+        });
+
+        // Update cart count (simplified version)
+        function updateCartCount() {
+            const cartCount = document.querySelector('.cart-count');
+            cartCount.textContent = '0'; // Start with 0 for services page
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if(this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

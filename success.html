@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Successful | Toppel Quantum</title>
+    <style>
+        body { font-family: Poppins, sans-serif; text-align: center; padding: 50px; }
+        .success-icon { color: #4CAF50; font-size: 80px; margin: 20px; }
+        .btn { background: #E4B461; color: #2A2750; padding: 15px 30px; 
+               border: none; border-radius: 8px; text-decoration: none; 
+               display: inline-block; margin-top: 20px; }
+
+               
+/* SUPER SIMPLE FIX */
+@media (min-width: 768px) { html { zoom: 0.80; } } /* Desktop/iPad smaller */
+@media (max-width: 767px) and (min-width: 360px) { html { zoom: 0.70; } } /* Medium mobile smaller */
+@media (max-width: 399px) { 
+    .container { padding: 0 10px !important; }
+    .hero-slider { height: 300px !important; }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="success-icon">✓</div>
+    <h1>Payment Successful!</h1>
+    <p>Thank you for your purchase. Your order has been confirmed.</p>
+    <p>Transaction Reference: <strong id="ref"></strong></p>
+    <a href="shop.html" class="btn">Continue Shopping</a>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById('ref').textContent = urlParams.get('reference');
+    </script>
+</body>
+</html>

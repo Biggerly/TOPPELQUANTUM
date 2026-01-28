@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toppel Quantum | Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #2A2750;
+            --gold: #E4B461;
+            --purple: #5A4B9C;
+            --beige: #F4E8DA;
+            --peach: #EED9C6;
+            --white: #FFFFFF;
+            --light-gray: #F8F8F8;
+            --gray: #777777;
+            --dark-gray: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--beige) 0%, var(--peach) 100%);
+            color: var(--navy);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            padding: 0 20px;
+            margin: 0 auto;
+        }
+
+        /* Header & Navigation - Matching Index */
+        header {
+            background-color: var(--navy);
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(42, 39, 80, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .logo i {
+            margin-right: 10px;
+            font-size: 24px;
+            color: var(--gold);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li a:hover {
+            color: var(--gold);
+        }
+
+        nav ul li a i {
+            margin-right: 8px;
+            font-size: 18px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar {
+            position: relative;
+            margin-right: 20px;
+        }
+
+        .search-bar input {
+            padding: 10px 15px 10px 40px;
+            border-radius: 25px;
+            border: 1px solid #ddd;
+            width: 250px;
+            font-size: 14px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .search-bar i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+        }
+
+        .cart-icon, .user-icon {
+            color: var(--white);
+            font-size: 20px;
+            margin-left: 20px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .cart-icon:hover, .user-icon:hover {
+            color: var(--gold);
+        }
+
+        .cart-count {
+            background-color: var(--gold);
+            color: var(--navy);
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: -8px;
+            right: -8px;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            color: var(--white);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .contact-hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            background: linear-gradient(rgba(42, 39, 80, 0.9), rgba(90, 75, 156, 0.9)), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            margin-bottom: 60px;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .contact-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .contact-hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: var(--beige);
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .btn-gold {
+            background-color: var(--gold);
+            color: var(--navy);
+        }
+
+        .btn-gold:hover {
+            background-color: #d0a04f;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(228, 180, 97, 0.3);
+        }
+
+        .btn-purple {
+            background-color: var(--purple);
+            color: var(--white);
+        }
+
+        .btn-purple:hover {
+            background-color: #4a3d84;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(90, 75, 156, 0.3);
+        }
+
+        .btn i {
+            margin-right: 8px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 0;
+            background: var(--white);
+            border-radius: 30px;
+            margin-bottom: 60px ;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--navy);
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: var(--gold);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            background: var(--light-gray);
+            padding: 40px;
+            border-radius: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 35px;
+        }
+
+        .info-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--beige) 0%, var(--peach) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: var(--purple);
+            flex-shrink: 0;
+        }
+
+        .info-content h3 {
+            font-size: 20px;
+            color: var(--navy);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .info-content p {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        .info-content a {
+            color: var(--purple);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .info-content a:hover {
+            color: var(--navy);
+            text-decoration: underline;
+        }
+
+        /* Social Media */
+        .social-connect {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .social-connect h3 {
+            font-size: 22px;
+            color: var(--navy);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .social-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background: var(--white);
+            border-radius: 15px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            color: var(--navy);
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-link.facebook:hover {
+            background: #1877F2;
+            color: white;
+        }
+
+        .social-link.instagram:hover {
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+            color: white;
+        }
+
+        .social-link.tiktok:hover {
+            background: #000000;
+            color: white;
+        }
+
+        .social-link.email:hover {
+            background: var(--purple);
+            color: white;
+        }
+
+        .social-link i {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .social-link span {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: var(--light-gray);
+            padding: 40px;
+            border-radius: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--navy);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            transition: all 0.3s;
+            background: var(--white);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--purple);
+            box-shadow: 0 5px 15px rgba(90, 75, 156, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* WhatsApp CTA */
+        .whatsapp-cta {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: var(--white);
+            text-align: center;
+            border-radius: 30px;
+            margin-bottom: 60px;
+        }
+
+        .whatsapp-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .whatsapp-cta p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+
+        .whatsapp-number {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 20px 0;
+            letter-spacing: 1px;
+            background: rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+        }
+
+        .whatsapp-btn {
+            background: var(--white);
+            color: #25D366;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            color: #128C7E;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 0;
+            background: var(--light-gray);
+            border-radius: 30px;
+            margin-bottom: 60px;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 50px auto 0;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: 15px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            padding: 25px;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--navy);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .faq-question:hover {
+            background: rgba(90, 75, 156, 0.05);
+        }
+
+        .faq-question i {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 25px 25px;
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        /* Footer - Matching Index */
+        footer {
+            background-color: var(--navy);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: var(--beige);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--gold);
+        }
+
+        .footer-column p {
+            color: var(--beige);
+            margin-bottom: 15px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--gold);
+            color: var(--navy);
+            transform: translateY(-3px);
+        }
+
+        .newsletter form {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        .newsletter input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 25px 0 0 25px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+        }
+
+        .newsletter input::placeholder {
+            color: var(--beige);
+        }
+
+        .newsletter button {
+            background-color: var(--gold);
+            color: var(--navy);
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 25px 25px 0;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .newsletter button:hover {
+            background-color: #d0a04f;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--beige);
+            font-size: 14px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .social-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-wrap: wrap;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                display: none;
+                width: 100%;
+                order: 3;
+                margin-top: 20px;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .search-bar input {
+                width: 200px;
+            }
+            
+            .contact-hero h1 {
+                font-size: 32px;
+            }
+            
+            .contact-hero p {
+                font-size: 18px;
+            }
+            
+            .section-title {
+                font-size: 30px;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .social-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .contact-hero {
+                padding: 80px 0 60px;
+            }
+            
+            .contact-hero h1 {
+                font-size: 28px;
+            }
+            
+            .info-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .social-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .whatsapp-number {
+                font-size: 22px;
+                padding: 12px 20px;
+            }
+            
+            .search-bar {
+                display: none;
+            }
+        }
+
+        /* Mobile Search Icon */
+        .search-icon-mobile {
+            display: none;
+            color: var(--white);
+            font-size: 20px;
+            cursor: pointer;
+            margin-left: 15px;
+            transition: color 0.3s;
+        }
+
+        .search-icon-mobile:hover {
+            color: var(--gold);
+        }
+
+        @media (max-width: 1200px) {
+            .header-container {
+                display: grid;
+                grid-template-columns: auto 1fr auto;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+                order: 1;
+                justify-content: flex-start;
+            }
+            
+            .logo {
+                order: 2;
+                justify-content: center;
+                text-align: center;
+                font-size: 24px;
+            }
+            
+            .header-actions {
+                order: 3;
+                justify-content: flex-end;
+                margin-right: 0;
+            }
+            
+            .search-bar {
+                display: none;
+            }
+            
+            .search-icon-mobile {
+                display: block;
+            }
+            
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--navy);
+                padding: 20px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                z-index: 999;
+                display: none;
+                order: 5;
+            }
+            
+            nav.active {
+                display: block;
+            }
+        }
+
+
+        
+
+
+
+/* Update container styles */
+.container {
+    max-width: 1400px; /* Changed from 100% */
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* For larger screens */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1500px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .container {
+        max-width: 1700px;
+    }
+}
+
+
+
+/* Base font size for desktop */
+@media (min-width: 1200px) {
+    body {
+        font-size: 16px;
+    }
+    
+    .hero h1,
+    .slide-content h1 {
+        font-size: 3.5rem; /* ~56px */
+    }
+    
+    .section-title {
+        font-size: 2.5rem; /* ~40px */
+    }
+    
+    .product-title,
+    .carousel-title {
+        font-size: 1.2rem; /* ~19px */
+    }
+}
+
+/* For very large screens */
+@media (min-width: 1600px) {
+    body {
+        font-size: 18px;
+    }
+    
+    .hero h1,
+    .slide-content h1 {
+        font-size: 4rem; /* ~64px */
+    }
+    
+    .section-title {
+        font-size: 2.8rem; /* ~45px */
+    }
+}
+
+/* Products grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* For larger screens */
+@media (min-width: 1600px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        max-width: 1500px;
+    }
+}
+
+/* Hero slider adjustments */
+.hero-slider {
+    position: relative;
+    height: 70vh; /* Changed from 600px */
+    max-height: 700px; /* Maximum height */
+    margin-bottom: 60px;
+    border-radius: 0 0 30px 30px;
+    overflow: hidden;
+}
+
+@media (min-width: 1600px) {
+    .hero-slider {
+        height: 65vh;
+        max-height: 750px;
+    }
+}
+
+/* Scale control for very large screens */
+@media (min-width: 1920px) {
+    :root {
+        font-size: 0.9em; /* Scales everything down by 10% */
+    }
+}
+
+@media (min-width: 2560px) {
+    :root {
+        font-size: 0.8em; /* Scales everything down by 20% */
+    }
+}
+
+/* Header container fix */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+
+
+/* Force specific aspect ratio (wider) */
+.logo img {
+    width: 250px; /* Width */
+    height: 65px; /* Height */
+    object-fit: cover; /* Fills the area, may crop */
+    border-radius: 40px;
+}
+
+
+
+/* SUPER SIMPLE FIX */
+@media (min-width: 768px) { html { zoom: 0.80; } } /* Desktop/iPad smaller */
+@media (max-width: 767px) and (min-width: 360px) { html { zoom: 0.70; } } /* Medium mobile smaller */
+@media (max-width: 399px) { 
+    .container { padding: 0 10px !important; }
+    .hero-slider { height: 300px !important; }
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+    <img src="images/toppel-quantum-logo.png" alt="Toppel Quantum Logo">
+</div>
+
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                    <li><a href="shop.html"><i class="fas fa-store"></i>Shop</a></li>
+                    <li><a href="services.html"><i class="fas fa-handshake"></i>Services</a></li>
+                    <li><a href="affiliates.html"><i class="fas fa-user-plus"></i>Affiliates</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i>About</a></li>
+                    <li><a href="contact.html" class="active"><i class="fas fa-envelope"></i>Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <i class="fas fa-user user-icon"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p>Have questions about quantum wellness? Ready to transform your health? We're here to help you on your journey.</p>
+            <a href="#contact-form" class="btn btn-gold">
+                <i class="fas fa-comments"></i> Send a Message
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section container">
+        <h2 class="section-title">Connect With Us</h2>
+        
+        <div class="contact-content">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Customer Support</h3>
+                        <p>Our wellness experts are ready to assist you with product questions, service bookings, and general inquiries.</p>
+                        <p><strong>Response Time:</strong> Within 24 hours</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>WhatsApp Chat</h3>
+                        <p>For quick questions and instant support, message us directly on WhatsApp. We're usually available during business hours.</p>
+                        <p><a href="https://wa.me/1234567890" target="_blank">Click to chat on WhatsApp</a></p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Email Support</h3>
+                        <p>Send us detailed inquiries about our products, services, or partnership opportunities.</p>
+                        <p><a href="mailto:tesogeyi@gmail.com">tesogeyi@gmail.com</a></p>
+                    </div>
+                </div>
+                
+                <!-- Social Media Links -->
+                <div class="social-connect">
+                    <h3>Follow Our Journey</h3>
+                    <div class="social-grid">
+                        <a href="https://www.instagram.com/toppel_quantum_wellness/#" class="social-link facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://www.instagram.com/toppel_quantum_wellness/#" class="social-link instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@toppel_quantum_wellness" class="social-link tiktok">
+                            <i class="fab fa-tiktok"></i>
+                            <span>TikTok</span>
+                        </a>
+                        <a href="mailto:tesogeyi@gmail.com" class="social-link email">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="contact-form" id="contact-form">
+                <h3 style="font-size: 24px; color: var(--navy); margin-bottom: 30px; text-align: center;">Send Us a Message</h3>
+                
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(Optional) For quicker response">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a topic</option>
+                            <option value="product">Product Inquiry</option>
+                            <option value="service">Service Booking</option>
+                            <option value="support">Customer Support</option>
+                            <option value="partnership">Partnership/Wholesale</option>
+                            <option value="affiliate">Affiliate Program</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" required placeholder="Tell us how we can help you..."></textarea>
+                    </div>
+                    
+                    <div class="form-group" style="display: flex; align-items: center; gap: 10px;">
+                        <input type="checkbox" id="newsletter" name="newsletter" style="width: auto;">
+                        <label for="newsletter" style="margin-bottom: 0; font-size: 14px;">
+                            Subscribe to our quantum wellness newsletter for tips and updates
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-purple" style="width: 100%; margin-top: 20px;">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp CTA -->
+    <section class="whatsapp-cta container">
+        <h2>Instant Support via WhatsApp</h2>
+        <p>Get quick answers to your questions, book services, or get product recommendations through WhatsApp.</p>
+        
+        <div class="whatsapp-number">+234 803 457 5435</div>
+        
+        <p style="font-size: 16px; opacity: 0.9; margin-bottom: 10px;">Available: Monday - Friday, 9 AM - 6 PM</p>
+        
+        <a href="https://wa.me/2348034575435" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp Now
+        </a>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section container" id="faq">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        
+        <div class="faq-container">
+            <!-- FAQ 1 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    How quickly will I receive a response to my inquiry?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We typically respond to all inquiries within 24 hours during business days. WhatsApp messages often receive responses within a few hours during business hours (9 AM - 6 PM). For urgent matters, we recommend using our WhatsApp channel.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ 2 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    How do I book a quantum wellness service?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>You can book services through our website's Services page, or contact us directly via WhatsApp or email. We'll guide you through the process, help you choose the right service, and schedule your session at a convenient time.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ 3 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    Do you offer wholesale or partnership opportunities?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! We work with wellness centers, spas, and retailers. Please select "Partnership/Wholesale" in the contact form or email us directly at tesogeyi@gmail.com with details about your business.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ 4 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    Can I get personalized quantum wellness recommendations?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely! Our quantum wellness experts can provide personalized recommendations based on your specific needs. Share your wellness goals with us via WhatsApp or email, and we'll suggest the best products and services for you.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ 5 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    What are your business hours for customer support?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Our customer support team is available Monday through Friday, 9 AM to 6 PM. WhatsApp support may have extended hours. Email inquiries are answered within 24 hours, even on weekends.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Toppel Quantum</h3>
+                    <p>Your premier destination for quantum wellness products and services</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/toppel_quantum_wellness/#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/toppel_quantum_wellness/#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@toppel_quantum_wellness" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="mailto:tesogeyi@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:tesogeyi@gmail.com">tesogeyi@gmail.com</a></li>
+                        <li><i class="fab fa-whatsapp"></i> WhatsApp: +2348034575435</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9 AM - 6 PM</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column newsletter">
+                    <h3>Wellness Updates</h3>
+                    <p>Subscribe for quantum wellness tips and special offers.</p>
+                    <form>
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Toppel Quantum. All rights reserved. | <a href="#" style="color: var(--gold);">Privacy Policy</a> | <a href="#" style="color: var(--gold);">Terms of Service</a> | powered by <a href="https://ebassgroup.web.app" target="_blank" rel="noopener noreferrer" style="color: var(--gold);">Ebass Group</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+
+        // Contact Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+                newsletter: document.getElementById('newsletter').checked
+            };
+            
+            // Show success message
+            alert('Thank you for your message, ' + formData.name + '!\n\nWe have received your inquiry and will respond within 24 hours.');
+            
+            // Reset form
+            this.reset();
+            
+            // Scroll to top of form
+            document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if(this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Update cart count
+        function updateCartCount() {
+            const cartCount = document.querySelector('.cart-count');
+            cartCount.textContent = '0'; // Start with 0 for contact page
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
+            
+            // WhatsApp number formatting
+            const whatsappNumber = document.querySelector('.whatsapp-number');
+            // You can dynamically update the number here
+            whatsappNumber.addEventListener('click', function() {
+                window.open('https://wa.me/1234567890', '_blank');
+            });
+        });
+
+        // Newsletter form submission
+        document.querySelector('.newsletter form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input').value;
+            if (email) {
+                alert(`Thank you for subscribing with: ${email}\nYou'll receive quantum wellness insights soon!`);
+                this.reset();
+            }
+        });
+
+        // Social media link tracking
+        document.querySelectorAll('.social-link').forEach(link => {
+            link.addEventListener('click', function() {
+                const platform = this.classList.contains('facebook') ? 'Facebook' :
+                               this.classList.contains('instagram') ? 'Instagram' :
+                               this.classList.contains('tiktok') ? 'TikTok' : 'Email';
+                console.log('Clicked on ' + platform + ' link');
+            });
+        });
+    </script>
+</body>
+</html>

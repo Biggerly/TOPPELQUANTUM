@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toppel Quantum | Affiliate Program</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #2A2750;
+            --gold: #E4B461;
+            --purple: #5A4B9C;
+            --beige: #F4E8DA;
+            --peach: #EED9C6;
+            --white: #FFFFFF;
+            --light-gray: #F8F8F8;
+            --gray: #777777;
+            --dark-gray: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--beige) 0%, var(--peach) 100%);
+            color: var(--navy);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1200px;
+            padding: 0 20px;
+            margin: 0 auto;
+        }
+
+        /* Header & Navigation - Matching Index */
+        header {
+            background-color: var(--navy);
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(42, 39, 80, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .logo i {
+            margin-right: 10px;
+            font-size: 24px;
+            color: var(--gold);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li a:hover {
+            color: var(--gold);
+        }
+
+        nav ul li a i {
+            margin-right: 8px;
+            font-size: 18px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar {
+            position: relative;
+            margin-right: 20px;
+        }
+
+        .search-bar input {
+            padding: 10px 15px 10px 40px;
+            border-radius: 25px;
+            border: 1px solid #ddd;
+            width: 250px;
+            font-size: 14px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .search-bar i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+        }
+
+        .cart-icon, .user-icon {
+            color: var(--white);
+            font-size: 20px;
+            margin-left: 20px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .cart-icon:hover, .user-icon:hover {
+            color: var(--gold);
+        }
+
+        .cart-count {
+            background-color: var(--gold);
+            color: var(--navy);
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: -8px;
+            right: -8px;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            color: var(--white);
+            cursor: pointer;
+        }
+
+        /* Coming Soon Hero */
+        .coming-soon-hero {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(rgba(42, 39, 80, 0.95), rgba(90, 75, 156, 0.95)), url('https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            margin: 20px;
+            border-radius: 30px;
+        }
+
+        .coming-soon-content {
+            max-width: 800px;
+            padding: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .coming-soon-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 64px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .coming-soon-content h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: var(--beige);
+            font-weight: 500;
+        }
+
+        .coming-soon-content p {
+            font-size: 20px;
+            color: var(--beige);
+            margin-bottom: 40px;
+            line-height: 1.8;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 50px 0;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 30px 20px;
+            min-width: 120px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .countdown-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .countdown-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 5px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .countdown-label {
+            font-size: 14px;
+            color: var(--beige);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn {
+            padding: 16px 40px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .btn-gold {
+            background-color: var(--gold);
+            color: var(--navy);
+        }
+
+        .btn-gold:hover {
+            background-color: #d0a04f;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(228, 180, 97, 0.3);
+        }
+
+        .btn-purple {
+            background-color: var(--purple);
+            color: var(--white);
+        }
+
+        .btn-purple:hover {
+            background-color: #4a3d84;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(90, 75, 156, 0.3);
+        }
+
+        .btn i {
+            margin-right: 10px;
+        }
+
+        /* Notify Me Section */
+        .notify-section {
+            padding: 60px 0;
+            background: var(--white);
+            border-radius: 30px;
+            margin: 40px 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--navy);
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: var(--gold);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .notify-form {
+            max-width: 500px;
+            margin: 40px auto 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        .notify-input {
+            flex: 1;
+            padding: 16px 25px;
+            border: 2px solid var(--beige);
+            border-radius: 30px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .notify-input:focus {
+            outline: none;
+            border-color: var(--purple);
+            box-shadow: 0 5px 15px rgba(90, 75, 156, 0.1);
+        }
+
+        /* Footer - Matching Index */
+        footer {
+            background-color: var(--navy);
+            color: var(--white);
+            padding: 60px 0 30px;
+            margin-top: auto;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: var(--beige);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--gold);
+        }
+
+        .footer-column p {
+            color: var(--beige);
+            margin-bottom: 15px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--gold);
+            color: var(--navy);
+            transform: translateY(-3px);
+        }
+
+        .newsletter form {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        .newsletter input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 25px 0 0 25px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+        }
+
+        .newsletter input::placeholder {
+            color: var(--beige);
+        }
+
+        .newsletter button {
+            background-color: var(--gold);
+            color: var(--navy);
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 25px 25px 0;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .newsletter button:hover {
+            background-color: #d0a04f;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--beige);
+            font-size: 14px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .coming-soon-content h1 {
+                font-size: 48px;
+            }
+            
+            .coming-soon-content h2 {
+                font-size: 28px;
+            }
+            
+            .coming-soon-content {
+                padding: 40px;
+            }
+            
+            .countdown {
+                gap: 15px;
+            }
+            
+            .countdown-item {
+                min-width: 100px;
+                padding: 25px 15px;
+            }
+            
+            .countdown-number {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-wrap: wrap;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                display: none;
+                width: 100%;
+                order: 3;
+                margin-top: 20px;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .search-bar input {
+                width: 200px;
+            }
+            
+            .coming-soon-content h1 {
+                font-size: 36px;
+            }
+            
+            .coming-soon-content h2 {
+                font-size: 24px;
+            }
+            
+            .coming-soon-content p {
+                font-size: 18px;
+            }
+            
+            .countdown {
+                gap: 10px;
+            }
+            
+            .countdown-item {
+                min-width: 80px;
+                padding: 20px 10px;
+            }
+            
+            .countdown-number {
+                font-size: 28px;
+            }
+            
+            .notify-form {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .coming-soon-hero {
+                padding: 40px 20px;
+                margin: 10px;
+            }
+            
+            .coming-soon-content {
+                padding: 30px 20px;
+            }
+            
+            .coming-soon-content h1 {
+                font-size: 32px;
+            }
+            
+            .countdown {
+                gap: 8px;
+            }
+            
+            .countdown-item {
+                min-width: 70px;
+                padding: 15px 8px;
+            }
+            
+            .countdown-number {
+                font-size: 24px;
+            }
+            
+            .countdown-label {
+                font-size: 12px;
+            }
+            
+            .search-bar {
+                display: none;
+            }
+        }
+
+        /* Mobile Search Icon */
+        .search-icon-mobile {
+            display: none;
+            color: var(--white);
+            font-size: 20px;
+            cursor: pointer;
+            margin-left: 15px;
+            transition: color 0.3s;
+        }
+
+        .search-icon-mobile:hover {
+            color: var(--gold);
+        }
+
+        @media (max-width: 1200px) {
+            .header-container {
+                display: grid;
+                grid-template-columns: auto 1fr auto;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+                order: 1;
+                justify-content: flex-start;
+            }
+            
+            .logo {
+                order: 2;
+                justify-content: center;
+                text-align: center;
+                font-size: 24px;
+            }
+            
+            .header-actions {
+                order: 3;
+                justify-content: flex-end;
+                margin-right: 0;
+            }
+            
+            .search-bar {
+                display: none;
+            }
+            
+            .search-icon-mobile {
+                display: block;
+            }
+            
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--navy);
+                padding: 20px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                z-index: 999;
+                display: none;
+                order: 5;
+            }
+            
+            nav.active {
+                display: block;
+            }
+        }
+
+        /* Animation */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+
+
+        
+
+
+
+/* Update container styles */
+.container {
+    max-width: 1400px; /* Changed from 100% */
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* For larger screens */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1500px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .container {
+        max-width: 1700px;
+    }
+}
+
+
+
+/* Base font size for desktop */
+@media (min-width: 1200px) {
+    body {
+        font-size: 16px;
+    }
+    
+    .hero h1,
+    .slide-content h1 {
+        font-size: 3.5rem; /* ~56px */
+    }
+    
+    .section-title {
+        font-size: 2.5rem; /* ~40px */
+    }
+    
+    .product-title,
+    .carousel-title {
+        font-size: 1.2rem; /* ~19px */
+    }
+}
+
+/* For very large screens */
+@media (min-width: 1600px) {
+    body {
+        font-size: 18px;
+    }
+    
+    .hero h1,
+    .slide-content h1 {
+        font-size: 4rem; /* ~64px */
+    }
+    
+    .section-title {
+        font-size: 2.8rem; /* ~45px */
+    }
+}
+
+/* Products grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* For larger screens */
+@media (min-width: 1600px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        max-width: 1500px;
+    }
+}
+
+/* Hero slider adjustments */
+.hero-slider {
+    position: relative;
+    height: 70vh; /* Changed from 600px */
+    max-height: 700px; /* Maximum height */
+    margin-bottom: 60px;
+    border-radius: 0 0 30px 30px;
+    overflow: hidden;
+}
+
+@media (min-width: 1600px) {
+    .hero-slider {
+        height: 65vh;
+        max-height: 750px;
+    }
+}
+
+/* Scale control for very large screens */
+@media (min-width: 1920px) {
+    :root {
+        font-size: 0.9em; /* Scales everything down by 10% */
+    }
+}
+
+@media (min-width: 2560px) {
+    :root {
+        font-size: 0.8em; /* Scales everything down by 20% */
+    }
+}
+
+/* Header container fix */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+
+
+/* Force specific aspect ratio (wider) */
+.logo img {
+    width: 250px; /* Width */
+    height: 65px; /* Height */
+    object-fit: cover; /* Fills the area, may crop */
+    border-radius: 40px;
+}
+
+
+/* SUPER SIMPLE FIX */
+@media (min-width: 768px) { html { zoom: 0.80; } } /* Desktop/iPad smaller */
+@media (max-width: 767px) and (min-width: 360px) { html { zoom: 0.70; } } /* Medium mobile smaller */
+@media (max-width: 399px) { 
+    .container { padding: 0 10px !important; }
+    .hero-slider { height: 300px !important; }
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+    <img src="images/toppel-quantum-logo.png" alt="Toppel Quantum Logo">
+</div>
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                    <li><a href="shop.html"><i class="fas fa-store"></i>Shop</a></li>
+                    <li><a href="services.html"><i class="fas fa-handshake"></i>Services</a></li>
+                    <li><a href="affiliates.html" class="active"><i class="fas fa-user-plus"></i>Affiliates</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i>About</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <i class="fas fa-user user-icon"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Coming Soon Hero -->
+    <section class="coming-soon-hero">
+        <div class="coming-soon-content float">
+            <div class="pulse">
+                <i class="fas fa-rocket" style="font-size: 80px; color: var(--gold); margin-bottom: 30px;"></i>
+            </div>
+            <h1>Affiliate Program</h1>
+            <h2>Coming Soon</h2>
+            <p>We're launching an exciting affiliate program that will allow you to earn generous commissions by promoting Toppel Quantum's premium wellness products and services.</p>
+            
+            <div class="countdown">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">30</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">12</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">45</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">30</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+            
+            <a href="#notify" class="btn btn-gold">
+                <i class="fas fa-bell"></i> Notify Me When Live
+            </a>
+        </div>
+    </section>
+
+    <!-- Notify Me Section -->
+    <section id="notify" class="notify-section container">
+        <h2 class="section-title">Get Early Access</h2>
+        <p style="color: var(--gray); font-size: 18px; max-width: 600px; margin: 0 auto 30px; line-height: 1.6;">
+            Be the first to know when our affiliate program launches. Sign up below and we'll notify you with exclusive early access and special launch bonuses.
+        </p>
+        
+        <form class="notify-form">
+            <input type="email" class="notify-input" placeholder="Enter your email address" required>
+            <button type="submit" class="btn btn-purple">
+                <i class="fas fa-paper-plane"></i> Notify Me
+            </button>
+        </form>
+        
+        <p style="color: var(--gray); font-size: 14px; margin-top: 20px;">
+            We respect your privacy. No spam, ever.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Toppel Quantum</h3>
+                    <p>Your premier destination for quantum wellness products and services</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/toppel_quantum_wellness/#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/toppel_quantum_wellness/#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@toppel_quantum_wellness" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="mailto:tesogeyi@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Coming Soon</h3>
+                    <ul>
+                        <li><a href="affiliates.html">Affiliate Program</a></li>
+                        <li><a href="#">Quantum Wellness App</a></li>
+                        <li><a href="#">Certification Program</a></li>
+                        <li><a href="#">Wholesale Portal</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column newsletter">
+                    <h3>Wellness Updates</h3>
+                    <p>Subscribe for quantum wellness tips and special offers.</p>
+                    <form>
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Toppel Quantum. All rights reserved. | <a href="#" style="color: var(--gold);">Privacy Policy</a> | <a href="#" style="color: var(--gold);">Terms of Service</a> | powered by <a href="https://ebassgroup.web.app" target="_blank" rel="noopener noreferrer" style="color: var(--gold);">Ebass Group</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+
+        // Countdown Timer
+        function updateCountdown() {
+            const launchDate = new Date('2024-03-01T00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+            
+            if (distance < 0) {
+                document.querySelector('.countdown').innerHTML = '<div style="font-size: 24px; color: var(--gold);">Launching Soon!</div>';
+                return;
+            }
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+
+        // Initialize countdown
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Notify Form
+        document.querySelector('.notify-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('.notify-input').value;
+            if (email) {
+                alert(`Thank you! We've added ${email} to our affiliate launch notification list.\n\nYou'll be the first to know when the program goes live with exclusive early access.`);
+                this.reset();
+            }
+        });
+
+        // Newsletter form submission
+        document.querySelector('.newsletter form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input').value;
+            if (email) {
+                alert(`Thank you for subscribing with: ${email}\nYou'll receive quantum wellness insights soon!`);
+                this.reset();
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if(this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Update cart count
+        function updateCartCount() {
+            const cartCount = document.querySelector('.cart-count');
+            cartCount.textContent = '0'; // Start with 0 for affiliate page
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
+            
+            // Add some random animation to countdown numbers
+            setInterval(() => {
+                const numbers = document.querySelectorAll('.countdown-number');
+                numbers.forEach(num => {
+                    if (Math.random() > 0.7) {
+                        num.style.transform = 'scale(1.1)';
+                        setTimeout(() => {
+                            num.style.transform = 'scale(1)';
+                        }, 300);
+                    }
+                });
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
